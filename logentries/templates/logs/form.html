@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+    <div class="container" style="color: black;">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                    <p style="color: red;">{{error}}</p>
+                <div style="margin-left: 30px; ">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                </div>
+            </form>
+               </div>
+{% endblock content %}
