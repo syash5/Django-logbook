@@ -10,9 +10,11 @@
 <form class="form-horizontal"  method="POST" action="" enctype='multipart/form-data'>
     {% csrf_token %}
     {{ form|crispy }}
-    <div>
-    <input class="btn btn-primary btn-lg" type="submit" value='Submit'>
-        </div>
+    <p style="color: red;">{{error}}</p>
+    <center>
+        <button type="submit" class="btn btn-primary button" name="login">Submit <i
+            class="fa fa-paper-plane-o ml-1"></i></button>
+    </center>
 </form>
     </div>
 {% endblock content %}

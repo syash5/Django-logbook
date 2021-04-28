@@ -1,8 +1,10 @@
 from django.db import models
 from django.utils.functional import cached_property
+from user.models import UserProfile
 
 class Project(models.Model):
 
+    # username = models.ForeignKey(UserProfile ,on_delete= models.CASCADE, default=None)
     project= models.CharField(max_length=50, default="",blank= False)
 
     def __str__(self):
@@ -11,6 +13,7 @@ class Project(models.Model):
 
 class LogEntry(models.Model):
 
+    # user = models.ForeignKey(UserProfile ,on_delete= models.CASCADE, defaultw=None)
     project = models.ForeignKey(Project ,on_delete= models.CASCADE, default=None)
     body = models.TextField(blank = True, max_length=100)
     startt = models.DateTimeField()

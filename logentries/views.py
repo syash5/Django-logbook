@@ -56,7 +56,7 @@ def add_log(request):
 
 @login_required(login_url="/login/")
 def show(request):
-    todotask = LogEntry.objects.all()
+    todotask = LogEntry.objects.filter(user=user)
 
     print(type(todotask.first))
     # print(todotask.first.date())

@@ -52,31 +52,60 @@
 
     <header>
             <nav>
-               <div class="menu-icon">
-                  <i class="fa fa-bars fa-2x"></i>
-               </div>
-               <div class="logo" >
-                 <h1><a><img height="65" src="{% static 'django.jpg' %}" alt="Django Application" /></a></h1>
-               </div>
                <div class="menu">
                   <ul>
                       {% if user.is_authenticated %}
-
+                      <li1><a href="{% url 'show' %}"><img height="80" width="80" src="{% static 'django.jpg' %}" style="margin-left:30px"/></a></li1>
                      <li><a href="{% url 'project-create' %}">Add Project</a></li>
                      <li><a href="{% url 'addlog' %}">Add Logs</a></li>
                      <li><a href="{% url 'show' %}">Show All Logs</a></li>
                      <li><a href="{% url 'user_logout' %}">Logout</a></li>
                      
                       {% else %}
+                      <li1><a  href="{% url 'show' %}"><img  height="80" width="80" src="{% static 'django.jpg' %}" href="{% url 'show' %}" style="margin-left:30px"/></a></li1>
                      <li><a href="{% url 'user_login' %}">Login</a></li>
                     <li><a href="{% url 'register_view' %}">Signup</a></li>
                      {% endif %}
                   </ul>
                </div>
             </nav>
+
+            <!-- <nav class="navbar navbar-expand-sm ">
+
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                  {% if user.is_authenticated %}
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'project-create' %}">Add Project <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'addlog' %}">Add Logs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'show' %}">Show All Logs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'user_logout' %}">Logout</a>
+                  </li>
+                  {% else %}
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'user_login' %}">Login <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'register_view' %}">Signup</a>
+                  </li>
+
+                  {% endif %}
+
+                </ul>
+              </div>
+            </nav> -->
+            
          </header>
 
-        <div class="wrapper">
+        <div class="wrappercl">
             {% block content %}
 
 
@@ -86,12 +115,12 @@
     </body>
 
 
-      <footer class="section footer-classic context-dark bg-image" style="background: black;">
+      <footer style="background: black;margin-top:20px; padding:40px ">
         <div class="container">
 
           <div class="row row-30">
             <div class="col-md-4 col-xl-5">
-              <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="{% static 'django.jpg' %}"  alt="" width="80" height="80" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+              <div class="pr-xl-4"><a class="brand" href="{% url 'show' %}"><img class="brand-logo-light" src="{% static 'django.jpg' %}"  alt="" width="80" height="80" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
                               <blockquote >
               <p>
                “Limitations live only in our minds. But if we use our imaginations, our possibilities become limitless.”

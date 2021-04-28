@@ -8,9 +8,10 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                     <p style="color: red;">{{error}}</p>
-                <div style="margin-left: 30px; ">
-                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                </div>
+                <center>
+                    <button type="submit" class="btn btn-primary button" name="login">Submit <i
+                        class="fa fa-paper-plane-o ml-1"></i></button>
+                </center>
             </form>
                </div>
 {% endblock content %}
