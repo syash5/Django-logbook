@@ -75,7 +75,7 @@ footer{
     background:#fff; 
     color:white;;
     margin: 0; 
-    
+    font-size: small;
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
@@ -121,7 +121,7 @@ nav ul li {
     font-size: 15px !important;
     font-weight: bold !important;
     background: rgb(0, 0, 0) !important;
-    background: linear-gradient(90deg, rgb(43, 42, 42) 0%, rgb(0, 0, 0) 100%) !important;
+    background: linear-gradient(90deg, rgb(15, 71, 50) 0%, rgb(12, 56, 40) 100%) !important;
   }
 /* nav ul li a {
     text-decoration: none;

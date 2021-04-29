@@ -5,7 +5,7 @@
     {% block content %}
 
 <div class="container" style="color: black;">
-    <h2 class="md-text">Login</h2>
+    <h2 class="md-text" style="margin-bottom: 40px; color: rgb(15, 71, 50)">Login</h2>
         <form method="POST">
             {% csrf_token %}
             <div class="form-group">
@@ -19,7 +19,8 @@
             </div>
                 <p style="color: red;">{{error}}</p>
             <center>
-            <button type="submit" class="btn btn-primary btn-lg button">Login</button>
+            <button type="submit" class="btn btn-primary btn-lg button">Login<i
+                class="fa fa-paper-plane-o ml-1"></i></button>
             </center>
         </form>
            </div>

@@ -19,7 +19,20 @@ class LogCreationForm(forms.ModelForm):
 
     class Meta:
         model = LogEntry
-        fields = [ 'body','startt' ,'endt' ,'project']
+        fields = [ 'body','startt' ,'endt' ,'project', 'user']
+        widgets = {'user': forms.HiddenInput()}
+        labels = {
+            'body': ('Describe Task'),
+            'startt': ('Start Date'),
+            'endt': ('End Date'),
+            'project': ('Project Name'),
+        }
+        help_texts = {
+            # 'body': ('Write Here'),
+            'startt': ('YYYY-MM-DD HH:MM:SS' ),
+            'endt': ('YYYY-MM-DD HH:MM:SS'),
+            # 'project': ('Write Here'),
+        }
         # widgets = {
         #     'startt': DateInput(),
         # }

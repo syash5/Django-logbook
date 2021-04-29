@@ -13,8 +13,8 @@ class Project(models.Model):
 
 class LogEntry(models.Model):
 
-    # user = models.ForeignKey(UserProfile ,on_delete= models.CASCADE, defaultw=None)
-    project = models.ForeignKey(Project ,on_delete= models.CASCADE, default=None)
+    user = models.ForeignKey(UserProfile ,on_delete= models.CASCADE, default=None, related_name='getuser',blank=True, null=True)
+    project = models.ForeignKey(Project ,on_delete= models.CASCADE, default=None,related_name='getproject')
     body = models.TextField(blank = True, max_length=100)
     startt = models.DateTimeField()
     endt = models.DateTimeField()

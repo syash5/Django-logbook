@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="container">
-<h2 class="md-text">{{ title }}</h2><hr>
+<h2 class="md-text" style="color: rgb(15, 71, 50); margin-bottom:40px">{{ title }}</h2><hr>
 <form class="form-horizontal"  method="POST" action="" enctype='multipart/form-data'>
     {% csrf_token %}
     {{ form|crispy }}
